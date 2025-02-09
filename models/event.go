@@ -34,12 +34,14 @@ type Payload struct {
 	Size         int64    `json:"size"`
 	DistinctSize int64    `json:"distinct_size"`
 	Ref          string   `json:"ref"`
+	RefType      string   `json:"ref_type"`
+	MasterBranch string   `json:"master_branch"`
 	Head         string   `json:"head"`
 	Before       string   `json:"before"`
 	Commits      []Commit `json:"commits"`
 }
 
-type Response struct {
+type Event struct {
 	ID        string     `json:"id"`
 	Type      string     `json:"type"`
 	Actor     Actor      `json:"actor"`
